@@ -125,13 +125,13 @@ async function starts() {
         pp_user = await client.getProfilePicture(mem);
       } catch (e) {
         pp_user =
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
+          "https://a.top4top.io/p_2207a0h7y1.jpg";
       }
       try {
         pp_grup = await client.getProfilePicture(anu.jid);
       } catch (e) {
         pp_grup =
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
+          "";
       }
       if (anu.action == "add" && mem.includes(client.user.jid)) {
         client.sendMessage(anu.jid, "Minasankon'nichiwa ㋛︎", "conversation");
@@ -149,7 +149,7 @@ if (anu.action == 'add' && !mem.includes(client.user.jid)) {
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
-                teks = `🌿 *KONICHIWA* @${num.split('@')[0]}\n🌿 *Bɪᴏ* : *${thu.status}*\n🌿 *Mᴇᴍʙᴇʀs : ${memeg}*\n🌿 *Wᴇʟᴄᴏᴍᴇ Tᴏ* \n *${mdata.subject}*\n*Subscribe My Channel*\n*https://www.youtube.com/c/AKIRAYTCHANNEL *\n🌿 *Dᴏɴᴛ Fᴏʀɢᴇᴛ Dɪsᴄʀɪᴘᴛɪᴏɴ* \n*🔹Nama =.....*\n*🔹Umur =.....*\n* 🔹Gender =.....*\n* 🔹Askot =..... `
+                teks = `🌿 *SELAMAT DATANG* @${num.split('@')[0]}\n🌿 *Bɪᴏ* : *${thu.status}*\n🌿 *Mᴇᴍʙᴇʀs : ${memeg}*\n🌿 *Wᴇʟᴄᴏᴍᴇ Tᴏ* \n *${mdata.subject}*\n*Subscribe My Channel*\n*https://www.youtube.com/c/AKIRAYTCHANNEL *\n🌿 *JANGAN LUPA INTRO* \n*🔹Nama =.....*\n*🔹Umur =.....*\n*🔹Gender =.....*\n*🔹Askot =..... `
                 welcomeBut = [{buttonId:`#owner`,buttonText:{displayText:'OWNER'},type:1}, {buttonId:`bebantot`,buttonText:{displayText:'KONNICHIWA BEBAN'},type:1}]
                 welcomeButt = { contentText: ` `, footerText: `${teks}`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
                 client.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
